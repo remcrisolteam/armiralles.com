@@ -623,13 +623,13 @@ section{padding:4rem 1.5rem}
       </div>
       <div class="vote-ok" id="voteOk">✓ Registrado. Si se hace, será el primero en saberlo.</div>
     </div>
-    <p class="contact-line">¿Algo que decir al autor? <a href="mailto:TUEMAIL@gmail.com">TUEMAIL@gmail.com</a></p>
+    <p class="contact-line">¿Algo que decir al autor? <a href="mailto:armiralles.2026dc@outlook.com">armiralles.2026dc@outlook.com</a></p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 · A. R. Miralles · <a href="mailto:TUEMAIL@gmail.com">Contacto</a></p>
+  <p>© 2026 · A. R. Miralles · <a href="mailto:armiralles.2026dc@outlook.com">Contacto</a></p>
 </footer>
 
 <!-- STICKY CTA (mobile) -->
@@ -666,7 +666,7 @@ function submitVote() {
   const btn = document.getElementById('voteBtn');
   btn.textContent = '...';
   btn.disabled = true;
-  fetch('https://formsubmit.co/ajax/TUEMAIL@gmail.com', {
+  fetch('https://formsubmit.co/ajax/armiralles.2026dc@outlook.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({ email: email.value, mensaje: 'Quiero edición en papel' })
