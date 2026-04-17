@@ -654,7 +654,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
     <h1><em>2026 después de Cristo</em><br>Un manual de deshabituación<br>que no habla de tabaco.</h1>
     <p class="hero-sub">Usted vive en el año 2026 después de Cristo. Descansa los domingos — día del Señor. Dice «adiós», que es una encomienda a Dios abreviada por la prisa. Nadie le preguntó si quería vivir así.</p>
     <div class="hero-actions">
-      <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" id="cta-hero" onclick="trackAmazonClick('hero')">Leer en Amazon</a>
+      <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" id="cta-hero" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'hero')">Leer en Amazon</a>
       <a href="#que-es" class="btn-ghost">¿De qué va? ↓</a>
     </div>
     <p class="price-line">
@@ -665,7 +665,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
     </p>
     <p class="hero-trust">
       101 páginas · Kindle · Leer muestra gratis en
-      <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="trackAmazonClick('sample-hero')">Amazon</a>
+      <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'sample-hero')">Amazon</a>
     </p>
   </div>
 </section>
@@ -743,7 +743,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
           <input type="checkbox" id="privacyConsent" required>
           <label for="privacyConsent">He leído y acepto la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Mi email se usará únicamente para avisarme de nuevas publicaciones del autor.</label>
         </div>
-        <p class="email-note">O, si ya se ha decidido, <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="trackAmazonClick('email-section')">léalo ahora en Amazon</a>.</p>
+        <p class="email-note">O, si ya se ha decidido, <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'email-section')">léalo ahora en Amazon</a>.</p>
       </div>
       <div class="email-ok" id="emailOk">✓ Apuntado. Le escribiré cuando haya algo nuevo.</div>
     </div>
@@ -805,9 +805,9 @@ a:focus-visible, button:focus-visible, input:focus-visible{
       <span class="launch-note">⏳ Precio de lanzamiento</span>
       <span class="note">ebook · gratis con Kindle Unlimited</span>
     </div>
-    <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" style="padding:1rem 2.5rem;font-size:1rem" onclick="trackAmazonClick('final-cta')">Leer en Amazon</a>
+    <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" style="padding:1rem 2.5rem;font-size:1rem" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'final-cta')">Leer en Amazon</a>
     <p class="sample-link">
-      ¿Prefiere probar antes? <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="trackAmazonClick('sample-final')">Lea la muestra gratuita</a>
+      ¿Prefiere probar antes? <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'sample-final')">Lea la muestra gratuita</a>
     </p>
     <p class="guarantee-line">Si pertenece a la Categoría A, le pedimos disculpas por el algoritmo.</p>
   </div>
@@ -824,7 +824,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
     <span style="text-decoration:line-through;opacity:0.5;margin-right:0.3rem">5,99 €</span>
     <strong>1,99 €</strong> · Gratis con KU
   </span>
-  <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" style="padding:0.65rem 1.4rem;font-size:0.85rem" onclick="trackAmazonClick('sticky')">Leer en Amazon</a>
+  <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" style="padding:0.65rem 1.4rem;font-size:0.85rem" onclick="return openAmazonExternal(event, 'https://www.amazon.es/dp/B0GWYMPZ6Q', 'sticky')">Leer en Amazon</a>
 </div>
 
 <!-- COOKIE BANNER -->
@@ -861,6 +861,34 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 </div>
 
 <script>
+// ══════════════════════════════════════════════════════════
+// FORZAR APERTURA EN NAVEGADOR EXTERNO DESDE IN-APP BROWSER
+// ══════════════════════════════════════════════════════════
+function openAmazonExternal(e, url, location) {
+  trackAmazonClick(location);
+
+  var ua = navigator.userAgent || '';
+  var isIG = /Instagram|FBAN|FBAV|FB_IAB/.test(ua);
+  var isAndroid = /Android/.test(ua);
+
+  if (!isIG) return true; // navegador normal, comportamiento por defecto
+
+  e.preventDefault();
+
+  if (isAndroid) {
+    // Intent URL: fuerza la apertura en Chrome (o el navegador por defecto del sistema)
+    var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
+      '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' +
+      encodeURIComponent(url) + ';end';
+    window.location.href = intentUrl;
+  } else {
+    // iOS: openExternalBrowser es el parámetro que algunos in-app browsers de Meta respetan
+    var sep = url.indexOf('?') !== -1 ? '&' : '?';
+    window.location.href = url + sep + 'openExternalBrowser=1';
+  }
+  return false;
+}
+
 // ══════════════════════════════════════════════════════════
 // GESTIÓN DE CONSENTIMIENTO DE COOKIES
 // ══════════════════════════════════════════════════════════
