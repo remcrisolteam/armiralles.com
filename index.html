@@ -70,11 +70,11 @@ n.fbSrc=v;
 }(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1066723349858444&ev=PageView&noscript=1" alt=""/></noscript>
+<!-- El bloque <noscript> del Pixel se ha eliminado a propósito: cargaría sin pasar por el banner de consentimiento. -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="preload" href="/assets/fonts/fonts.css" as="style">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 
 <style>
 :root {
@@ -1009,30 +1009,35 @@ function submitEmail() {
   btn.textContent = 'Enviando...';
   btn.disabled = true;
 
-  fetch('https://formsubmit.co/ajax/armiralles.2026dc@outlook.com', {
+  fetch('https://suscripciones.armiralles.com/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       email: input.value,
-      mensaje: 'Nuevo suscriptor desde armiralles.com — consentimiento aceptado el ' + new Date().toISOString(),
-      _subject: 'Nuevo suscriptor - armiralles.com',
-      _captcha: 'true',
-      _template: 'table'
+      honeypot: honeypot ? honeypot.value : '',
+      consent_timestamp: new Date().toISOString()
     })
   })
   .then(r => r.json())
-  .then(() => {
-    document.getElementById('emailForm').style.display = 'none';
-    document.getElementById('emailOk').classList.add('visible');
-    try {
-      if (typeof fbq === 'function' && window._metaPixelLoaded) {
-        fbq('track', 'CompleteRegistration');
-      }
-    } catch(e) {}
+  .then((data) => {
+    if (data && data.ok) {
+      document.getElementById('emailForm').style.display = 'none';
+      document.getElementById('emailOk').classList.add('visible');
+      try {
+        if (typeof fbq === 'function' && window._metaPixelLoaded) {
+          fbq('track', 'CompleteRegistration');
+        }
+      } catch(e) {}
+    } else {
+      btn.textContent = 'Avisarme';
+      btn.disabled = false;
+      alert('No se ha podido procesar la suscripción. Inténtelo en unos minutos.');
+    }
   })
   .catch(() => {
-    document.getElementById('emailForm').style.display = 'none';
-    document.getElementById('emailOk').classList.add('visible');
+    btn.textContent = 'Avisarme';
+    btn.disabled = false;
+    alert('Error de red. Revise su conexión e inténtelo de nuevo.');
   });
 }
 

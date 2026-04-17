@@ -195,3 +195,14 @@ a:focus-visible, button:focus-visible {
   color: var(--text-dim);
   line-height: 1.55;
 }
+
+/* Email ofuscado (anti-bot) */
+.em {
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.em::after {
+  content: attr(data-u) "@" attr(data-d);
+}

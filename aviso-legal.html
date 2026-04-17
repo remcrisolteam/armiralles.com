@@ -8,9 +8,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
 <link rel="canonical" href="https://www.armiralles.com/aviso-legal.html">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <link rel="stylesheet" href="/legal-styles.css">
 </head>
 <body>
@@ -29,7 +27,7 @@
   <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos identificativos del responsable del sitio web <strong>armiralles.com</strong>:</p>
   <ul>
     <li><strong>Titular:</strong> <em>A. R. Miralles</em>, seudónimo literario bajo el que opera una persona física no constituida como empresa ni profesional colegiado.</li>
-    <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:armiralles.2026dc@outlook.com">armiralles.2026dc@outlook.com</a></li>
+    <li><strong>Correo electrónico de contacto:</strong> <span class="em" data-u="hola" data-d="armiralles.com"></span></li>
     <li><strong>Sitio web:</strong> <a href="https://www.armiralles.com">https://www.armiralles.com</a></li>
   </ul>
 
@@ -72,5 +70,15 @@
   <p>© 2026 · A. R. Miralles · <a href="/">Inicio</a> · <a href="/legal.html">Información legal</a></p>
 </footer>
 
+<script>
+document.querySelectorAll('.em').forEach(function(s){
+  var e = s.dataset.u + '@' + s.dataset.d;
+  var a = document.createElement('a');
+  a.href = 'mailto:' + e;
+  a.className = 'em';
+  a.textContent = e;
+  s.replaceWith(a);
+});
+</script>
 </body>
 </html>
