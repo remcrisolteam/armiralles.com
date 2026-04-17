@@ -10,19 +10,18 @@
 <meta name="keywords" content="2026 después de Cristo, A. R. Miralles, ensayo religión, dejar la fe, deshabituación, ensayo literario español, católico no practicante, ebook Amazon, Kindle Unlimited">
 <link rel="canonical" href="https://www.armiralles.com/">
 
-<!-- Favicon (cenicero en emoji como atajo rápido; reemplazable por .ico propio) -->
+<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
 
-<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<!-- Open Graph -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="2026 después de Cristo — Cómo dejar de ser de otro">
 <meta property="og:description" content="Un manual de deshabituación que no habla de tabaco. Habla de lo que ocurre cuando alguien deja de creer en lo que nunca eligió creer.">
 <meta property="og:url" content="https://www.armiralles.com/">
 <meta property="og:site_name" content="A. R. Miralles">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image" content="https://www.armiralles.com/assets/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<!-- TODO: genera og-image.jpg de 1200x630 y colócala en /assets. Mientras tanto, usamos la portada como fallback. -->
+<meta property="og:image" content="https://www.armiralles.com/assets/portada.jpg">
 <meta property="og:image:alt" content="Portada del libro 2026 después de Cristo, de A. R. Miralles">
 <meta property="book:author" content="A. R. Miralles">
 
@@ -30,20 +29,16 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="2026 después de Cristo — Cómo dejar de ser de otro">
 <meta name="twitter:description" content="Un manual de deshabituación que no habla de tabaco. Ebook de A. R. Miralles, 1,99 € en Amazon.">
-<meta name="twitter:image" content="https://www.armiralles.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://www.armiralles.com/assets/portada.jpg">
 
-<!-- Schema.org structured data (libro) -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Book",
   "name": "2026 después de Cristo — Cómo dejar de ser de otro",
   "description": "Un manual de deshabituación que no habla de tabaco. Habla de lo que ocurre cuando alguien deja de creer en lo que nunca eligió creer.",
-  "author": {
-    "@type": "Person",
-    "name": "A. R. Miralles",
-    "url": "https://www.armiralles.com/"
-  },
+  "author": { "@type": "Person", "name": "A. R. Miralles", "url": "https://www.armiralles.com/" },
   "inLanguage": "es",
   "bookFormat": "https://schema.org/EBook",
   "numberOfPages": 101,
@@ -60,27 +55,22 @@
 }
 </script>
 
-<!-- META PIXEL (PLACEHOLDER — Sustituir YOUR_PIXEL_ID por el real cuando tengas el Pixel) -->
-<!-- Instrucciones:
-     1. Crea un Pixel en https://business.facebook.com/events_manager2/
-     2. Copia tu Pixel ID (número de 15 dígitos aprox)
-     3. Sustituye YOUR_PIXEL_ID en las dos líneas de abajo
-     4. Elimina esta nota cuando esté listo -->
+<!--
+  META PIXEL — BLOQUEADO hasta consentimiento.
+  Se prepara el stub fbq() pero el script real de Meta no se inyecta
+  en el DOM hasta que el usuario acepta cookies de marketing.
+-->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+n.fbSrc=v;
+}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1066723349858444');
-fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1066723349858444&ev=PageView&noscript=1"/></noscript>
-<!-- FIN META PIXEL -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1066723349858444&ev=PageView&noscript=1" alt=""/></noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,7 +103,6 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-/* ── STICKY CTA (mobile) ── */
 .sticky-cta{
   position:fixed;bottom:0;left:0;right:0;z-index:100;
   padding:0.8rem 1rem;
@@ -134,7 +123,6 @@ body{
 }
 .sticky-price strong{color:var(--wood);font-weight:600}
 
-/* ── BUTTONS ── */
 .btn{
   display:inline-flex;align-items:center;gap:0.5rem;
   padding:0.85rem 2rem;
@@ -163,7 +151,6 @@ body{
 }
 .btn-ghost:hover{border-color:var(--cream-dim);color:var(--cream)}
 
-/* ── HERO ── */
 .hero{
   min-height:100vh;min-height:100svh;
   background:linear-gradient(180deg,var(--wood) 0%,var(--wood-light) 100%);
@@ -264,13 +251,12 @@ body{
   margin-top:1.5rem;
   font-family:'DM Sans',sans-serif;
   font-size:0.78rem;
-  color:var(--text-dark);
+  color:var(--cream-dim);
   letter-spacing:0.3px;
 }
-.hero-trust a{color:var(--cream-dim);text-decoration:none;border-bottom:1px solid var(--text-dark);transition:all 0.3s}
+.hero-trust a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--cream-dim);transition:all 0.3s}
 .hero-trust a:hover{color:var(--red);border-color:var(--red)}
 
-/* ── SECTIONS GENERIC ── */
 section{padding:4rem 1.5rem}
 .inner{max-width:680px;margin:0 auto}
 .divider{
@@ -282,11 +268,9 @@ section{padding:4rem 1.5rem}
   letter-spacing:1rem;margin:1.5rem 0;font-size:0.9rem;
 }
 
-/* Reveal on scroll */
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.7s ease-out}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ── ABOUT ── */
 .about{background:var(--bg)}
 .about p{
   font-size:1.15rem;line-height:1.75;color:var(--text);
@@ -295,7 +279,6 @@ section{padding:4rem 1.5rem}
   hyphens:auto;
 }
 
-/* ── CATEGORIES ── */
 .cats{background:var(--wood);color:var(--cream);padding:5rem 1.5rem}
 .cats .divider{background:var(--red)}
 .cats-title{
@@ -328,7 +311,6 @@ section{padding:4rem 1.5rem}
 }
 .cat-item em{color:var(--cream);font-style:italic}
 
-/* ── QUOTE ── */
 .quote-section{background:var(--bg-alt);padding:5rem 1.5rem;text-align:center}
 .quote-text{
   font-family:'EB Garamond',serif;
@@ -345,7 +327,6 @@ section{padding:4rem 1.5rem}
   letter-spacing:0.5px;
 }
 
-/* ── EMAIL CAPTURE ── */
 .email-capture{
   background:linear-gradient(180deg,var(--wood-light) 0%,var(--wood) 100%);
   color:var(--cream);padding:5rem 1.5rem;
@@ -381,6 +362,35 @@ section{padding:4rem 1.5rem}
 }
 .email-input::placeholder{color:var(--text-dark)}
 .email-input:focus{border-color:var(--red);background:rgba(245,240,230,0.15)}
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+.consent-row{
+  display:flex;align-items:flex-start;gap:0.6rem;
+  margin-top:1rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.8rem;
+  color:var(--cream-dim);
+  text-align:left;
+  line-height:1.5;
+}
+.consent-row input[type="checkbox"]{
+  margin-top:0.2rem;
+  accent-color:var(--red);
+  flex-shrink:0;
+  width:1rem;height:1rem;
+  cursor:pointer;
+}
+.consent-row label{cursor:pointer}
+.consent-row a{color:var(--cream);text-decoration:underline;text-underline-offset:2px}
+.consent-row a:hover{color:var(--red)}
+.hp-field{
+  position:absolute !important;
+  left:-9999px !important;
+  width:1px !important;height:1px !important;
+  opacity:0 !important;pointer-events:none !important;
+}
 .email-ok{
   display:none;
   padding:1rem;
@@ -394,7 +404,6 @@ section{padding:4rem 1.5rem}
 }
 .email-note a{color:var(--cream-dim);text-decoration:underline}
 
-/* ── AUTHOR NOTE ── */
 .author-note{background:var(--bg);padding:4rem 1.5rem}
 .author-note blockquote{
   font-family:'EB Garamond',serif;
@@ -414,7 +423,6 @@ section{padding:4rem 1.5rem}
   margin-top:0.5rem;
 }
 
-/* ── AUTHOR CARD ── */
 .author{background:var(--bg-alt);padding:4rem 1.5rem}
 .author-card{
   max-width:520px;margin:0 auto;
@@ -441,7 +449,6 @@ section{padding:4rem 1.5rem}
   hyphens:auto;
 }
 
-/* ── INDEX ── */
 .index{background:var(--bg);padding:4rem 1.5rem}
 .index-title{
   font-family:'EB Garamond',serif;
@@ -462,7 +469,6 @@ section{padding:4rem 1.5rem}
   min-width:2rem;
 }
 
-/* ── FINAL CTA ── */
 .final{
   background:var(--wood);color:var(--cream);
   text-align:center;padding:5rem 1.5rem;
@@ -517,18 +523,88 @@ section{padding:4rem 1.5rem}
 .sample-link a{color:var(--red);text-decoration:none;font-weight:500}
 .sample-link a:hover{text-decoration:underline}
 
-/* ── FOOTER ── */
 .footer{
   background:var(--wood);color:var(--text-dark);
   text-align:center;padding:2rem 1.5rem 6rem;
   font-family:'DM Sans',sans-serif;
   font-size:0.82rem;
   border-top:1px solid rgba(245,240,230,0.08);
+  line-height:1.8;
 }
-.footer a{color:var(--cream-dim);text-decoration:none;margin:0 0.5rem}
-.footer a:hover{color:var(--red)}
+.footer a{color:var(--cream-dim);text-decoration:none;margin:0 0.4rem;border-bottom:1px solid transparent;transition:all 0.2s}
+.footer a:hover{color:var(--red);border-color:var(--red)}
 
-/* ── ANIMATIONS ── */
+/* COOKIE BANNER */
+.cookie-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:var(--wood);
+  color:var(--cream);
+  padding:1.2rem 1.5rem;
+  border-top:2px solid var(--red);
+  box-shadow:0 -8px 32px rgba(0,0,0,0.4);
+  transform:translateY(100%);
+  transition:transform 0.4s ease-out;
+  font-family:'DM Sans',sans-serif;
+}
+.cookie-banner.visible{transform:translateY(0)}
+.cookie-inner{
+  max-width:900px;margin:0 auto;
+  display:flex;flex-direction:column;gap:1rem;
+  align-items:flex-start;
+}
+.cookie-text{
+  font-size:0.88rem;line-height:1.55;color:var(--cream-dim);
+  flex:1;
+}
+.cookie-text strong{color:var(--cream);font-weight:600}
+.cookie-text a{color:var(--red);text-decoration:underline;text-underline-offset:2px}
+.cookie-buttons{
+  display:flex;gap:0.5rem;flex-wrap:wrap;
+  width:100%;
+}
+.cookie-btn{
+  padding:0.7rem 1.2rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.85rem;
+  font-weight:600;
+  letter-spacing:0.3px;
+  border:1px solid var(--cream-dim);
+  background:transparent;
+  color:var(--cream);
+  cursor:pointer;
+  border-radius:2px;
+  transition:all 0.2s;
+  flex:1;
+  min-width:110px;
+}
+.cookie-btn:hover{background:rgba(245,240,230,0.1)}
+.cookie-btn.accept{
+  background:var(--red);border-color:var(--red);color:#fff;
+}
+.cookie-btn.accept:hover{background:var(--red-dark);border-color:var(--red-dark)}
+.cookie-settings{
+  display:none;
+  margin-top:1rem;width:100%;
+  padding:1rem;
+  background:rgba(245,240,230,0.05);
+  border:1px solid rgba(245,240,230,0.1);
+  border-radius:2px;
+}
+.cookie-settings.visible{display:block}
+.cookie-cat{
+  display:flex;align-items:flex-start;gap:0.8rem;
+  margin-bottom:0.8rem;
+}
+.cookie-cat:last-child{margin-bottom:0}
+.cookie-cat input[type="checkbox"]{
+  margin-top:0.2rem;accent-color:var(--red);
+  width:1rem;height:1rem;flex-shrink:0;
+}
+.cookie-cat input[disabled]{opacity:0.5;cursor:not-allowed}
+.cookie-cat-text{font-size:0.82rem;line-height:1.45}
+.cookie-cat-text b{color:var(--cream);font-weight:600;display:block;margin-bottom:0.15rem}
+.cookie-cat-text span{color:var(--text-dark)}
+
 @keyframes coverIn{
   from{opacity:0;transform:translateY(-10px) rotate(-1deg)}
   to{opacity:1;transform:translateY(0) rotate(0)}
@@ -538,7 +614,6 @@ section{padding:4rem 1.5rem}
   to{opacity:1;transform:translateY(0)}
 }
 
-/* ── RESPONSIVE ── */
 @media (min-width:768px){
   .hero{padding:4rem 2rem}
   .cover-wrap{width:240px}
@@ -546,19 +621,20 @@ section{padding:4rem 1.5rem}
   section{padding:5rem 2rem}
   .footer{padding-bottom:3rem}
   .email-form{flex-wrap:nowrap}
+  .cookie-inner{flex-direction:row;align-items:center;gap:1.5rem}
+  .cookie-buttons{width:auto;flex-shrink:0}
+  .cookie-btn{flex:initial}
 }
 @media (max-width:480px){
   .price-line{font-size:0.82rem}
   .launch-badge,.kindle-free{display:block;margin:0.3rem 0 0;width:fit-content;margin-left:auto;margin-right:auto}
 }
 
-/* ── ACCESSIBILITY ── */
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important}
   .reveal{opacity:1;transform:none}
 }
 
-/* Focus visible para accesibilidad */
 a:focus-visible, button:focus-visible, input:focus-visible{
   outline:2px solid var(--red);
   outline-offset:2px;
@@ -649,7 +725,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   </div>
 </section>
 
-<!-- EMAIL CAPTURE (lead magnet secundario) -->
+<!-- EMAIL CAPTURE -->
 <section class="email-capture" id="suscribirse">
   <div class="inner reveal">
     <div class="divider"></div>
@@ -658,8 +734,14 @@ a:focus-visible, button:focus-visible, input:focus-visible{
       <p>Deje su email y le avisaré cuando salga el próximo libro. Nada más. Sin boletines, sin cadenas, sin «contenido exclusivo». Solo el aviso cuando haya algo nuevo que leer.</p>
       <div id="emailForm">
         <div class="email-form">
+          <label for="emailInput" class="sr-only">Dirección de correo electrónico</label>
           <input type="email" class="email-input" id="emailInput" placeholder="su@email.com" required autocomplete="email">
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="button" class="btn" id="emailBtn" onclick="submitEmail()">Avisarme</button>
+        </div>
+        <div class="consent-row">
+          <input type="checkbox" id="privacyConsent" required>
+          <label for="privacyConsent">He leído y acepto la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Mi email se usará únicamente para avisarme de nuevas publicaciones del autor.</label>
         </div>
         <p class="email-note">O, si ya se ha decidido, <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" onclick="trackAmazonClick('email-section')">léalo ahora en Amazon</a>.</p>
       </div>
@@ -731,9 +813,9 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER: un único enlace a "Información legal" (arquitectura 2 clics) -->
 <footer class="footer">
-  <p>© 2026 · A. R. Miralles · <a href="#suscribirse">Contacto por email</a></p>
+  <p>© 2026 · A. R. Miralles · <a href="/legal.html">Información legal</a></p>
 </footer>
 
 <!-- STICKY CTA (mobile) -->
@@ -745,8 +827,138 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   <a href="https://www.amazon.es/dp/B0GWYMPZ6Q" target="_blank" rel="noopener" class="btn" style="padding:0.65rem 1.4rem;font-size:0.85rem" onclick="trackAmazonClick('sticky')">Leer en Amazon</a>
 </div>
 
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies" aria-describedby="cookieText">
+  <div class="cookie-inner">
+    <div class="cookie-text" id="cookieText">
+      <strong>Este sitio usa cookies.</strong> Utilizamos cookies técnicas (necesarias para que la web funcione) y, si usted lo acepta, cookies de marketing de Meta para medir la eficacia de nuestras campañas publicitarias. Puede aceptar, rechazar o configurar su elección. Más información en la <a href="/cookies.html">política de cookies</a>.
+    </div>
+    <div class="cookie-buttons">
+      <button class="cookie-btn" id="cookieReject" type="button">Rechazar</button>
+      <button class="cookie-btn" id="cookieSettings" type="button">Configurar</button>
+      <button class="cookie-btn accept" id="cookieAccept" type="button">Aceptar</button>
+    </div>
+    <div class="cookie-settings" id="cookieSettingsPanel">
+      <div class="cookie-cat">
+        <input type="checkbox" id="catTechnical" checked disabled>
+        <div class="cookie-cat-text">
+          <b>Cookies técnicas (obligatorias)</b>
+          <span>Necesarias para el funcionamiento del sitio y para recordar su elección sobre cookies. No pueden desactivarse.</span>
+        </div>
+      </div>
+      <div class="cookie-cat">
+        <input type="checkbox" id="catMarketing">
+        <div class="cookie-cat-text">
+          <b>Cookies de marketing</b>
+          <span>Meta Pixel. Miden la eficacia de campañas publicitarias en Facebook e Instagram. Implican transferencia de datos a EE. UU. bajo el marco Data Privacy Framework.</span>
+        </div>
+      </div>
+      <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap">
+        <button class="cookie-btn accept" id="cookieSavePrefs" type="button">Guardar preferencias</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-// ── Sticky CTA: aparece tras hacer scroll fuera del hero ──
+// ══════════════════════════════════════════════════════════
+// GESTIÓN DE CONSENTIMIENTO DE COOKIES
+// ══════════════════════════════════════════════════════════
+const CONSENT_KEY = 'armiralles_consent';
+const CONSENT_VERSION = 1;
+const META_PIXEL_ID = '1066723349858444';
+
+function readConsent() {
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (parsed.version !== CONSENT_VERSION) return null;
+    return parsed;
+  } catch(e) { return null; }
+}
+
+function saveConsent(marketing) {
+  const consent = {
+    marketing: !!marketing,
+    date: new Date().toISOString(),
+    version: CONSENT_VERSION
+  };
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify(consent)); } catch(e) {}
+  return consent;
+}
+
+function activateMetaPixel() {
+  if (window._metaPixelLoaded) return;
+  window._metaPixelLoaded = true;
+
+  if (window.fbq && window.fbq.fbSrc) {
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = window.fbq.fbSrc;
+    const first = document.getElementsByTagName('script')[0];
+    first.parentNode.insertBefore(s, first);
+  }
+
+  if (window.fbq) {
+    fbq('init', META_PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+}
+
+function deactivateMetaCookies() {
+  ['_fbp', '_fbc', 'fr'].forEach(function(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.armiralles.com';
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  });
+}
+
+const banner = document.getElementById('cookieBanner');
+const settingsPanel = document.getElementById('cookieSettingsPanel');
+const catMarketing = document.getElementById('catMarketing');
+
+function showBanner() { banner.classList.add('visible'); }
+function hideBanner() { banner.classList.remove('visible'); }
+
+function initConsentFlow() {
+  const existing = readConsent();
+  const url = new URL(window.location.href);
+  const forceReopen = url.searchParams.get('reopen-cookies') === '1';
+
+  if (existing && !forceReopen) {
+    if (existing.marketing) activateMetaPixel();
+    return;
+  }
+  setTimeout(showBanner, 500);
+}
+
+document.getElementById('cookieAccept').addEventListener('click', function() {
+  saveConsent(true);
+  activateMetaPixel();
+  hideBanner();
+});
+
+document.getElementById('cookieReject').addEventListener('click', function() {
+  saveConsent(false);
+  deactivateMetaCookies();
+  hideBanner();
+});
+
+document.getElementById('cookieSettings').addEventListener('click', function() {
+  settingsPanel.classList.toggle('visible');
+});
+
+document.getElementById('cookieSavePrefs').addEventListener('click', function() {
+  const marketing = catMarketing.checked;
+  saveConsent(marketing);
+  if (marketing) activateMetaPixel();
+  else deactivateMetaCookies();
+  hideBanner();
+});
+
+initConsentFlow();
+
+// Sticky CTA
 const sticky = document.getElementById('sticky');
 const hero = document.querySelector('.hero');
 const obsSticky = new IntersectionObserver(([e]) => {
@@ -754,31 +966,45 @@ const obsSticky = new IntersectionObserver(([e]) => {
 }, { threshold: 0.1 });
 obsSticky.observe(hero);
 
-// ── Reveal on scroll ──
+// Reveal on scroll
 const obsReveal = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obsReveal.unobserve(e.target); }});
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => obsReveal.observe(el));
 
-// ── Tracking de clics a Amazon (Meta Pixel + fallback) ──
+// Tracking Amazon (solo si pixel activo)
 function trackAmazonClick(location) {
   try {
-    if (typeof fbq === 'function') {
+    if (typeof fbq === 'function' && window._metaPixelLoaded) {
       fbq('track', 'Lead', { content_name: '2026 después de Cristo', location: location });
-      // fbq('trackCustom', 'AmazonClick', { location: location });
     }
   } catch(e) {}
 }
 
-// ── Captura de email ──
-// Envía a armiralles.2026dc@outlook.com vía FormSubmit (gratuito)
+// Formulario con consentimiento + honeypot
 function submitEmail() {
   const input = document.getElementById('emailInput');
+  const consent = document.getElementById('privacyConsent');
+  const honeypot = document.querySelector('input[name="_honey"]');
+
   if (!input.value || !input.validity.valid) {
     input.style.borderColor = 'var(--red)';
     input.focus();
     return;
   }
+
+  if (!consent.checked) {
+    consent.parentElement.style.color = '#ff9e95';
+    consent.focus();
+    return;
+  }
+
+  if (honeypot && honeypot.value) {
+    document.getElementById('emailForm').style.display = 'none';
+    document.getElementById('emailOk').classList.add('visible');
+    return;
+  }
+
   const btn = document.getElementById('emailBtn');
   btn.textContent = 'Enviando...';
   btn.disabled = true;
@@ -788,16 +1014,21 @@ function submitEmail() {
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       email: input.value,
-      mensaje: 'Nuevo suscriptor desde armiralles.com',
+      mensaje: 'Nuevo suscriptor desde armiralles.com — consentimiento aceptado el ' + new Date().toISOString(),
       _subject: 'Nuevo suscriptor - armiralles.com',
-      _captcha: 'false'
+      _captcha: 'true',
+      _template: 'table'
     })
   })
   .then(r => r.json())
   .then(() => {
     document.getElementById('emailForm').style.display = 'none';
     document.getElementById('emailOk').classList.add('visible');
-    try { if (typeof fbq === 'function') fbq('track', 'CompleteRegistration'); } catch(e) {}
+    try {
+      if (typeof fbq === 'function' && window._metaPixelLoaded) {
+        fbq('track', 'CompleteRegistration');
+      }
+    } catch(e) {}
   })
   .catch(() => {
     document.getElementById('emailForm').style.display = 'none';
@@ -805,7 +1036,6 @@ function submitEmail() {
   });
 }
 
-// Permitir enviar con Enter
 document.getElementById('emailInput').addEventListener('keypress', (e) => {
   if (e.key === 'Enter') { e.preventDefault(); submitEmail(); }
 });
