@@ -1,0 +1,197 @@
+/* Estilos compartidos para páginas legales de armiralles.com */
+
+:root {
+  --wood: #2a1f17;
+  --wood-light: #3d2e22;
+  --red: #c8483a;
+  --red-dark: #a03028;
+  --cream: #f5f0e6;
+  --cream-dim: #d4c9b8;
+  --text: #2c2018;
+  --text-dim: #5c4f43;
+  --text-dark: #8a7a6e;
+  --bg: #f5f0e6;
+  --bg-alt: #ece7db;
+  --border: rgba(42,31,23,0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.legal-header {
+  background: linear-gradient(180deg, var(--wood) 0%, var(--wood-light) 100%);
+  color: var(--cream);
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+.legal-header a.back-link {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(245,240,230,0.2);
+  padding-bottom: 2px;
+  transition: all 0.25s;
+}
+.legal-header a.back-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+.legal-header h1 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+}
+.legal-header .subtitle {
+  color: var(--cream-dim);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+main.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+main.legal-content h2 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+main.legal-content h2:first-of-type { margin-top: 0; }
+main.legal-content h3 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin: 1.5rem 0 0.6rem;
+  color: var(--text);
+}
+main.legal-content p,
+main.legal-content li {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-dim);
+  line-height: 1.75;
+}
+main.legal-content ul,
+main.legal-content ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+main.legal-content li { margin-bottom: 0.5rem; }
+main.legal-content strong { color: var(--text); font-weight: 600; }
+main.legal-content a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,72,58,0.3);
+  transition: all 0.2s;
+}
+main.legal-content a:hover {
+  color: var(--red-dark);
+  border-bottom-color: var(--red-dark);
+}
+main.legal-content .meta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dotted var(--border);
+}
+main.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+  font-family: 'DM Sans', sans-serif;
+}
+main.legal-content th,
+main.legal-content td {
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+main.legal-content th {
+  background: var(--bg-alt);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+main.legal-content .callout {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--red);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 0 2px 2px 0;
+}
+main.legal-content .callout p { margin-bottom: 0.5rem; }
+main.legal-content .callout p:last-child { margin-bottom: 0; }
+footer.legal-footer {
+  background: var(--wood);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  border-top: 1px solid rgba(245,240,230,0.08);
+}
+footer.legal-footer a {
+  color: var(--cream-dim);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+footer.legal-footer a:hover { color: var(--red); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* Estilos específicos para hub legal */
+.legal-hub-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.legal-hub-card {
+  display: block;
+  padding: 1.5rem 1.4rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  transition: all 0.2s;
+}
+.legal-hub-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(42,31,23,0.08);
+}
+.legal-hub-card h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem !important;
+  color: var(--text) !important;
+}
+.legal-hub-card p {
+  margin: 0 !important;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
