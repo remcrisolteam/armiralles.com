@@ -1,0 +1,64 @@
+/* Fuentes autohospedadas — sin llamadas a Google.
+   Los archivos .woff2 son opcionales: si no están, los navegadores
+   usan automáticamente las fuentes de fallback del sistema (Georgia
+   para Garamond, el sans-serif del sistema para DM Sans). */
+
+/* ===== EB Garamond ===== */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('EB Garamond'), local('EBGaramond-Regular'),
+       url('eb-garamond-latin-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('EB Garamond Medium'), local('EBGaramond-Medium'),
+       url('eb-garamond-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('EB Garamond SemiBold'), local('EBGaramond-SemiBold'),
+       url('eb-garamond-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('EB Garamond Italic'), local('EBGaramond-Italic'),
+       url('eb-garamond-latin-400italic.woff2') format('woff2');
+}
+
+/* ===== DM Sans ===== */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Sans'), local('DMSans-Regular'),
+       url('dm-sans-latin-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('DM Sans Medium'), local('DMSans-Medium'),
+       url('dm-sans-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('DM Sans SemiBold'), local('DMSans-SemiBold'),
+       url('dm-sans-latin-600.woff2') format('woff2');
+}
