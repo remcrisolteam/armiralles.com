@@ -1072,6 +1072,75 @@ function submitEmail() {
 document.getElementById('emailInput').addEventListener('keypress', (e) => {
   if (e.key === 'Enter') { e.preventDefault(); submitEmail(); }
 });
+
+// ══════════════════════════════════════════════════════════
+// TRACKING ADICIONAL (solo si pixel activo)
+// Todos los eventos cumplen consentimiento: solo disparan si
+// window._metaPixelLoaded === true (usuario aceptó cookies).
+// ══════════════════════════════════════════════════════════
+function trackEvent(name, params) {
+  try {
+    if (typeof fbq === 'function' && window._metaPixelLoaded) {
+      fbq('trackCustom', name, params || {});
+    }
+  } catch(e) {}
+}
+
+// 1. Engagement: clic en "¿De qué va? ↓"
+(function() {
+  var aboutLink = document.querySelector('a.btn-ghost[href="#que-es"]');
+  if (aboutLink) {
+    aboutLink.addEventListener('click', function() {
+      trackEvent('ScrollToAbout', { from: 'hero' });
+    });
+  }
+})();
+
+// 2. Inicio de interacción con el formulario (primera vez que escribe)
+(function() {
+  var emailInput = document.getElementById('emailInput');
+  if (!emailInput) return;
+  var started = false;
+  emailInput.addEventListener('input', function() {
+    if (started) return;
+    started = true;
+    trackEvent('FormStart', { form: 'email-subscription' });
+  }, { once: false });
+})();
+
+// 3. Scroll tracking: dispara cuando el usuario llega al CTA final
+// (indica interés real, no rebote)
+(function() {
+  var finalSection = document.getElementById('comprar');
+  if (!finalSection) return;
+  var fired = false;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !fired) {
+        fired = true;
+        trackEvent('ReachedFinalCTA');
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  obs.observe(finalSection);
+})();
+
+// 4. Decisión del banner de cookies (útil para calcular tu ratio aceptación/rechazo)
+// Se dispara DESPUÉS de guardar el consentimiento, así que respeta 100% la ley.
+(function() {
+  function markBannerDecision(choice) {
+    // Guardamos en sessionStorage para reportarlo una sola vez si aceptó
+    try { sessionStorage.setItem('_banner_choice', choice); } catch(e) {}
+  }
+  document.getElementById('cookieAccept').addEventListener('click', function() {
+    markBannerDecision('accept');
+    // El pixel se acaba de activar; esperamos un tick para que fbq esté listo
+    setTimeout(function() { trackEvent('CookieBannerAccept'); }, 100);
+  });
+  // Los eventos de rechazo no se pueden trackear con Meta (no hay pixel),
+  // pero Cloudflare Web Analytics sí los verá como visita.
+})();
 </script>
 
 </body>
