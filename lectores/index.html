@@ -1,1 +1,623 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lectura — 2026 después de Cristo</title>
+<meta name="description" content="Lectura gratuita en Kindle del 23 al 27 de abril. Solo para quien llega por Instagram.">
+<meta property="og:title" content="Bienvenido. Participa en la lectura.">
+<meta property="og:description" content="101 páginas. O más, si decide volver a algún capítulo. Gratis en Kindle hasta el 27.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f0e8;--bg-2:#fdfaf5;--bg-card:#ffffff;
+    --ink:#1a1916;--ink-2:#3a362f;--ink-dim:#6b645a;
+    --accent:#b8271e;--accent-hover:#9e2018;--accent-soft:#f7ece9;--accent-softer:#fdf5f4;
+    --line:rgba(26,25,22,.10);--line-strong:rgba(26,25,22,.18);
+    --gold:#9a7a2a;--gold-soft:#f7f0de;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"DM Sans",-apple-system,BlinkMacSystemFont,sans-serif;
+    --radius:8px;--shadow:0 2px 12px rgba(26,25,22,.07);--shadow-lg:0 8px 32px rgba(26,25,22,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+  a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;transition:color .15s}
+  a:hover{color:var(--accent)}
+  strong{font-weight:600}
 
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(245,240,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:760px;margin:0 auto;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:-.01em}
+  .brand em{color:var(--ink-dim);font-style:italic}
+  .jump{font-size:13px;font-weight:600;letter-spacing:.03em;background:var(--accent);color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background .15s,transform .1s}
+  .jump:hover{color:#fff;background:var(--accent-hover);transform:translateY(-1px)}
+
+  .wrap{max-width:720px;margin:0 auto;padding:48px 24px 96px}
+
+  .hero{margin-bottom:36px}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:20px}
+  .kicker::before{content:"";display:inline-block;width:20px;height:2px;background:var(--accent)}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.04;letter-spacing:-.015em;margin:0 0 16px;color:var(--ink)}
+  .hero h1 em{font-style:italic;color:var(--ink-dim);font-weight:400}
+  .lede{font-size:20px;color:var(--ink-2);margin:0 0 8px;font-family:var(--serif);line-height:1.4;font-style:italic;font-weight:400}
+  .subline{color:var(--ink-dim);font-size:15px;margin:0}
+
+  .counter{display:flex;gap:0;margin:0 0 36px;background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .counter>div{flex:1;padding:20px 18px;text-align:center;border-right:1px solid var(--line)}
+  .counter>div:last-child{border-right:0}
+  .counter .n{font-family:var(--serif);font-size:38px;color:var(--accent);font-weight:600;line-height:1;margin-bottom:5px}
+  .counter .l{color:var(--ink-dim);font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
+  .counter .sub{color:var(--accent);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:3px;opacity:.75}
+
+  .preview-label{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);font-weight:600;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+  .preview-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .preview-wall{margin:0 0 36px}
+  .preview-entry{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:10px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
+  .preview-entry:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+  .preview-phrase{font-family:var(--serif);font-size:19px;line-height:1.4;color:var(--ink);margin-bottom:8px}
+  .preview-meta{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .preview-cat{width:22px;height:22px;border-radius:50%;border:1.5px solid currentColor;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600;flex-shrink:0}
+  .preview-ch{display:inline-block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line-strong);padding:2px 7px;border-radius:2px;background:var(--bg)}
+
+  .about{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 32px;box-shadow:var(--shadow)}
+  .about p{margin:0 0 12px;color:var(--ink-2);font-size:15.5px;line-height:1.6}
+  .about p:first-child{color:var(--ink)}
+  .about p:last-of-type{margin-bottom:0}
+  .about .sig{font-family:var(--serif);font-style:italic;color:var(--ink-dim);margin-top:16px;font-size:16px}
+
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 32px}
+  .fact{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+  .fact .label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:5px;font-weight:600}
+  .fact .value{font-family:var(--serif);font-size:17px;line-height:1.25;color:var(--ink)}
+  .fact .value small{color:var(--ink-dim);font-size:12px;display:block;font-family:var(--sans);margin-top:2px;font-weight:400}
+  @media(max-width:560px){.facts{grid-template-columns:1fr 1fr}}
+
+  /* SIGNUP — email only */
+  .signup{background:var(--accent-soft);border:1.5px solid rgba(184,39,30,.25);border-radius:var(--radius);padding:26px 28px;margin:0 0 56px;scroll-margin-top:80px;box-shadow:var(--shadow)}
+  .signup-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px}
+  .signup h3{font-family:var(--serif);font-weight:500;font-size:28px;margin:0 0 6px;color:var(--ink);letter-spacing:-.01em}
+  .signup .note{color:var(--ink-2);margin:0 0 4px;font-size:14.5px;line-height:1.5}
+
+  .row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .row>*{flex:1;min-width:180px}
+  label{display:block;font-size:12.5px;color:var(--ink-2);margin-bottom:5px;font-weight:600;letter-spacing:.01em}
+  input[type=email],input[type=text],select,textarea{width:100%;background:var(--bg-card);color:var(--ink);border:1px solid var(--line-strong);border-radius:4px;padding:11px 13px;font-family:var(--sans);font-size:15px;outline:none;transition:border-color .15s,box-shadow .15s}
+  input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(184,39,30,.12)}
+  textarea{resize:vertical;min-height:80px}
+  button{background:var(--accent);color:#fff;border:0;border-radius:4px;padding:13px 24px;font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer;letter-spacing:.02em;transition:background .15s,transform .1s}
+  button:hover:not(:disabled){background:var(--accent-hover);transform:translateY(-1px)}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  .checkbox{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--ink-2);margin-top:14px;line-height:1.4}
+  .checkbox input{margin-top:3px;accent-color:var(--accent)}
+  .ok{color:#2d6a3e;font-size:14px;margin-top:12px;font-weight:600}
+  .err{color:#9a2a24;font-size:14px;margin-top:12px;font-weight:600}
+
+  /* WALL */
+  .wall-head{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 6px;border-top:1px solid var(--line);padding-top:40px}
+  .wall-head h2{font-family:var(--serif);font-weight:500;font-size:34px;margin:0;letter-spacing:-.01em}
+  .wall-head .count{color:var(--ink-dim);font-size:14px}
+  .wall-intro{color:var(--ink-dim);font-size:14.5px;margin:0 0 24px;line-height:1.5}
+
+  .entry{border-bottom:1px solid var(--line);padding:22px 0;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+  .entry:last-child{border-bottom:0}
+  .cat{width:42px;height:42px;border-radius:50%;background:var(--bg-card);border:1.5px solid var(--line-strong);color:var(--ink);font-family:var(--serif);font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .cat.A{color:#4a6b82;border-color:#4a6b82;background:#f0f4f7}
+  .cat.B{color:var(--accent);border-color:var(--accent);background:var(--accent-softer)}
+  .cat.C{color:var(--gold);border-color:var(--gold);background:var(--gold-soft)}
+  .cat.D{color:#2d6a3e;border-color:#2d6a3e;background:#eef5f0}
+  .cat.E{color:#7a3d8a;border-color:#7a3d8a;background:#f5eef8}
+  .cat.F{color:#3a362f;border-color:#3a362f;background:#f0e8d8}
+  .entry .meta{font-size:12.5px;color:var(--ink-dim);margin-bottom:7px;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+  .entry .meta .handle{color:var(--ink);font-weight:600}
+  .entry .meta .tester{display:inline-block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:1px 5px;border-radius:2px;margin-left:4px;font-weight:600;background:var(--gold-soft)}
+  .reply-count-badge{color:var(--ink-dim);font-size:11px;font-weight:400}
+  .entry .phrase{font-family:var(--serif);font-size:20px;line-height:1.4;color:var(--ink)}
+  .entry .ch{display:inline-block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin-top:9px;border:1px solid var(--line-strong);padding:3px 7px;border-radius:2px;background:var(--bg)}
+
+  /* REPLIES */
+  .replies{margin-top:14px;padding-left:16px;border-left:2px solid var(--line-strong)}
+  .reply-entry{padding:10px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+  .reply-entry:last-child{border-bottom:0}
+  .reply-cat{width:28px;height:28px;border-radius:50%;background:var(--bg-card);border:1px solid var(--line-strong);color:var(--ink);font-family:var(--serif);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .reply-entry .meta{font-size:11.5px;color:var(--ink-dim);margin-bottom:4px}
+  .reply-entry .phrase{font-family:var(--serif);font-size:16px;line-height:1.4;color:var(--ink)}
+
+  /* REPLY BUTTON */
+  .reply-btn{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:12.5px;color:var(--ink-dim);background:none;border:1px solid var(--line-strong);border-radius:3px;padding:5px 12px;cursor:pointer;font-family:var(--sans);font-weight:500;transition:border-color .15s,color .15s,background .15s}
+  .reply-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent);background:var(--accent-softer);transform:none}
+
+  /* REPLY FORM */
+  .reply-form{margin-top:12px;padding:16px;background:var(--bg);border:1px solid var(--line-strong);border-radius:6px;display:none}
+  .reply-form.open{display:block}
+  .reply-form textarea{font-size:14px;min-height:60px;background:var(--bg-card)}
+  .reply-form .reply-actions{display:flex;gap:8px;margin-top:10px;align-items:center;flex-wrap:wrap}
+  .reply-form .reply-actions button{padding:8px 18px;font-size:13.5px}
+  .cancel-btn{background:none!important;border:1px solid var(--line-strong)!important;color:var(--ink-2)!important}
+  .cancel-btn:hover:not(:disabled){background:var(--bg-card)!important;border-color:var(--ink-dim)!important;color:var(--ink)!important;transform:none!important}
+
+  /* REACT BOX */
+  details.react{margin-top:40px;border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--bg-card);box-shadow:var(--shadow)}
+  details.react summary{padding:18px 22px;cursor:pointer;font-weight:600;list-style:none;font-size:15.5px;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+  details.react summary::-webkit-details-marker{display:none}
+  details.react summary::after{content:"+";color:var(--accent);font-size:24px;font-weight:300;line-height:1}
+  details.react[open] summary::after{content:"−"}
+  details.react .body{padding:0 22px 24px}
+  details.react .body p.hint{color:var(--ink-dim);margin:6px 0 0;font-size:14px;line-height:1.5}
+
+  footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-dim);font-size:13px}
+  footer a{color:var(--ink-dim)}
+
+  .urgency{background:var(--ink);color:#f5f0e8;border-radius:var(--radius);padding:14px 20px;margin:0 0 32px;display:flex;align-items:center;gap:14px;font-size:14px}
+  .urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+  .urgency strong{color:#fff;font-weight:600}
+
+  @media(max-width:540px){
+    .hero h1{font-size:40px}
+    .wrap{padding:32px 20px 72px}
+    .wall-head h2{font-size:28px}
+    .signup{padding:20px}
+    .counter .n{font-size:30px}
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  .hero{animation:fadeUp .55s ease both}
+  .urgency{animation:fadeUp .55s .1s ease both}
+  .counter{animation:fadeUp .55s .15s ease both}
+  .preview-wall{animation:fadeUp .55s .2s ease both}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">A. R. Miralles — <em>2026 d.C.</em></div>
+    <a href="#signup" class="jump">Recibir la lectura</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kicker">Del 23 al 27 de abril · Solo desde Instagram</span>
+    <h1>Bienvenido. <em>Participa en la lectura.</em></h1>
+    <p class="lede">Un ensayo disfrazado de guía para dejar de fumar. No trata del tabaco.</p>
+    <p class="subline" style="margin-top:8px">Solo puede participar quien haya llegado aquí por el anuncio. Deje su email y el autor le envía el enlace.</p>
+  </div>
+
+  <div class="urgency">
+    <div class="urgency-dot"></div>
+    <span>Quedan <strong id="count-days-banner">—</strong> días. El acceso gratuito cierra el 27 de abril a medianoche.</span>
+  </div>
+
+  <div class="counter" id="counter">
+    <div><div class="n" id="count-reading">—</div><div class="l">leyendo</div><div class="sub">únase</div></div>
+    <div><div class="n" id="count-done">—</div><div class="l">frases en el muro</div></div>
+    <div><div class="n" id="count-days">—</div><div class="l">días restantes</div></div>
+  </div>
+
+  <div class="preview-wall" id="preview-wall">
+    <div class="preview-label">Lo que dicen quienes ya leyeron</div>
+    <div id="preview-entries"></div>
+    <p style="font-size:13.5px;color:var(--ink-dim);margin-top:12px"><a href="#el-muro">Ver todas las frases ↓</a></p>
+  </div>
+
+  <!-- SIGNUP — solo email -->
+  <div class="signup" id="signup">
+    <div class="signup-eyebrow">Acceso gratuito · Solo esta semana</div>
+    <h3>Reciba el enlace</h3>
+    <p class="note">Un solo email. El enlace a Kindle y un recordatorio cuando termine para que deje su frase. Nada más. Sin boletín.</p>
+    <div style="margin-top:16px">
+      <label for="su-email">Su email</label>
+      <input id="su-email" type="email" required placeholder="usted@dominio.com" autocomplete="email">
+    </div>
+    <label class="checkbox">
+      <input id="su-privacy" type="checkbox">
+      <span>He leído la <a href="https://armiralles.com/privacidad.html">política de privacidad</a>. Mi email se usará solo para enviarme el enlace de lectura.</span>
+    </label>
+    <div style="margin-top:18px">
+      <button id="su-btn">Enviarme el enlace</button>
+    </div>
+    <div id="su-msg"></div>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><div class="label">Formato</div><div class="value">Solo Kindle (Amazon)</div></div>
+    <div class="fact"><div class="label">Extensión</div><div class="value">101 páginas<small>— o más, si vuelve a algún capítulo</small></div></div>
+    <div class="fact"><div class="label">Coste</div><div class="value">Cero — estos cinco días</div></div>
+  </div>
+
+  <div class="about">
+    <p><strong>Le escribo como autor, no como marca.</strong></p>
+    <p>Este libro es mi primer libro. Lo escribí porque la alternativa era seguir explicándolo en cenas, y las cenas tienen un límite de paciencia que los libros no tienen.</p>
+    <p>Durante cinco días lo abro gratis en Kindle para lectores que llegan desde Instagram. No pido reseña — pido una frase, aquí abajo, cuando termine. Si además le apetece dejar reseña en Amazon, el autor lo agradece. (El autor prefiere hablar del autor en tercera persona; es un tic del libro.)</p>
+    <div class="sig">— A. R. M.</div>
+  </div>
+
+  <div class="wall-head" id="el-muro">
+    <h2>El muro</h2>
+    <span class="count" id="wall-count"></span>
+  </div>
+  <p class="wall-intro">Frases de quienes ya leyeron — ordenadas por actividad reciente.</p>
+
+  <div class="wall" id="wall"></div>
+
+  <details class="react" id="react-box">
+    <summary>¿Ya ha terminado? Dejar su frase</summary>
+    <div class="body">
+      <p class="hint">Una sola frase. Máximo 140 caracteres. La que le saldría si se lo contara a un amigo en un bar.</p>
+      <p style="font-size:13px;color:var(--ink-dim);margin-top:12px;margin-bottom:4px">Rellene uno de los dos — el otro se vaciará solo.</p>
+      <div class="row">
+        <div>
+          <label for="rx-ig">Instagram <span style="color:var(--ink-dim);font-weight:400">(opcional)</span></label>
+          <div style="display:flex;align-items:center;gap:0">
+            <span style="padding:11px 10px 11px 13px;background:var(--bg);border:1px solid var(--line-strong);border-right:0;border-radius:4px 0 0 4px;font-size:15px;color:var(--ink-dim);line-height:1;flex-shrink:0">@</span>
+            <input id="rx-ig" type="text" placeholder="su_cuenta" maxlength="30" style="border-radius:0 4px 4px 0" oninput="exclusiveField('rx-ig','rx-alias');toggleIgLinkMain()">
+          </div>
+        </div>
+        <div>
+          <label for="rx-alias">Nombre o alias <span style="color:var(--ink-dim);font-weight:400">(opcional)</span></label>
+          <input id="rx-alias" type="text" placeholder="Ana, un lector, …" maxlength="40" oninput="exclusiveField('rx-alias','rx-ig');toggleIgLinkMain()">
+        </div>
+        <div id="rx-ig-link-wrap" style="display:none">
+          <label for="rx-ig-link">¿Enlazar perfil?</label>
+          <select id="rx-ig-link">
+            <option value="yes">Sí, enlazar mi @</option>
+            <option value="no">No enlazar</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <div>
+          <label for="rx-cat">Qué Categoría es usted</label>
+          <select id="rx-cat">
+            <option value="">— elegir —</option>
+            <option value="A">A — cree y practica</option>
+            <option value="B">B — ya no cree, pero sigue encendiendo el cigarrillo</option>
+            <option value="C">C — salió, siente el hueco</option>
+            <option value="D">D — nunca estuvo dentro</option>
+            <option value="E">E — salió y necesita tener razón</option>
+            <option value="F">F — no sabe por qué llegó hasta aquí</option>
+          </select>
+        </div>
+        <div>
+          <label for="rx-chap">Capítulo que le tocó</label>
+          <select id="rx-chap">
+            <option value="">— opcional —</option>
+            <option>1. El diagnóstico</option><option>2. La instalación</option>
+            <option>3. La sustancia</option><option>4. El humo pasivo</option>
+            <option>5. El fumador social</option><option>6. El síndrome de abstinencia</option>
+            <option>7. La recaída</option><option>8. Los sustitutos</option>
+            <option>Interludio: cambiar de marca</option><option>9. El último cigarrillo</option>
+            <option>10. La vida sin humo</option><option>Apéndice: ¿y si mis hijos me preguntan?</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <label for="rx-phrase">Su frase <span id="rx-count" style="color:var(--ink-dim);font-weight:400">(0/140)</span></label>
+        <textarea id="rx-phrase" maxlength="140" placeholder="La que le saldría si se lo contara a un amigo."></textarea>
+      </div>
+      <div style="margin-top:16px"><button id="rx-btn">Publicar</button></div>
+      <p class="hint" style="margin-top:12px">Al publicar acepta que su frase y su @ sean visibles en esta página. Para borrado: <a href="mailto:hola@armiralles.com">hola@armiralles.com</a>.</p>
+      <div id="rx-msg"></div>
+    </div>
+  </details>
+
+  <footer>© 2026 · A. R. Miralles · <a href="https://armiralles.com/">armiralles.com</a> · <a href="https://armiralles.com/privacidad.html">Privacidad</a></footer>
+</div>
+
+<script>
+  const API = "https://lectores-api.armiralles.workers.dev";
+  const END = new Date("2026-04-28T00:00:00+02:00");
+
+  // SEED vacío — las frases semilla ahora están en la base de datos (ver worker/seeds.sql)
+  // y vienen por /state como reacciones normales. Así los hilos de respuesta persisten.
+  const SEED = [];
+
+
+  const $=s=>document.querySelector(s);
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const CAT_COLORS={A:'#4a6b82',B:'#b8271e',C:'#9a7a2a',D:'#2d6a3e',E:'#7a3d8a',F:'#3a362f'};
+
+  // Pending replies: client-side until backend supports reply_to
+  const pendingReplies={};
+
+  function updateDays(){
+    const diff=Math.max(0,Math.ceil((END-new Date())/86400000));
+    $("#count-days").textContent=diff;
+    $("#count-days-banner").textContent=diff;
+  }
+  updateDays(); setInterval(updateDays,60000);
+
+  // When user types in one field, clear the other
+  function exclusiveField(activeId, clearId){
+    const active=document.getElementById(activeId);
+    const clear=document.getElementById(clearId);
+    if(active && active.value.trim()) { if(clear) clear.value=''; }
+    toggleIgLinkMain();
+  }
+  function exclusiveFieldInline(activeInput, activeCls, clearCls){
+    const form=activeInput.closest('.reply-form');
+    if(!form) return;
+    if(activeInput.value.trim()){
+      const toClean=form.querySelector('.'+clearCls);
+      if(toClean) toClean.value='';
+    }
+    repToggleIgLink(activeInput);
+  }
+  function toggleIgLinkMain(){
+    const igVal=(document.getElementById('rx-ig')||{}).value||'';
+    const wrap=document.getElementById('rx-ig-link-wrap');
+    if(wrap) wrap.style.display=igVal.trim()?'':'none';
+  }
+  function repToggleIgLink(input){
+    const form=input.closest('.reply-form');
+    if(!form) return;
+    const igVal=(form.querySelector('.rep-ig')||{}).value||'';
+    const wrap=form.querySelector('.rep-ig-link-wrap');
+    if(wrap) wrap.style.display=igVal.trim()?'':'none';
+  }
+
+  // Build display handle from dual fields — returns {handle, ig_link}
+  function resolveHandle(igVal, aliasVal, igLinkWrap){
+    const ig=igVal.trim().replace(/^@/,'');
+    const alias=aliasVal.trim();
+    if(ig){
+      const link=(igLinkWrap&&igLinkWrap.style.display!=='none')
+        ? (igLinkWrap.querySelector('select').value==='yes') : false;
+      return {handle:ig, ig_link:link};
+    }
+    return {handle: alias||'anónimo', ig_link:false};
+  }
+
+  // Handle rendering — ig_link flag is set explicitly by user choice
+  function renderHandle(handle,ig_link,size='normal'){
+    const cls=size==='small'?'style="font-size:11.5px;font-weight:600"':'class="handle"';
+    const displayName=ig_link?`@${esc(handle)}`:esc(handle);
+    if(ig_link){
+      return `<a ${cls} href="https://instagram.com/${esc(handle)}" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink);font-weight:600">${displayName}</a>`;
+    }
+    return `<span ${cls} style="color:var(--ink);font-weight:600">${displayName}</span>`;
+  }
+
+  // Sort: entries with most recent activity (own date or latest reply) come first
+  function lastActivity(entry){
+    if(!entry.replies||entry.replies.length===0) return entry.created_at;
+    return entry.replies.reduce((max,r)=>r.created_at>max?r.created_at:max,entry.created_at);
+  }
+  function sortByActivity(rows){
+    return [...rows].sort((a,b)=>lastActivity(b).localeCompare(lastActivity(a)));
+  }
+
+  function renderPreview(rows){
+    const best=sortByActivity(rows).slice(0,3);
+    $("#preview-entries").innerHTML=best.map(r=>`
+      <div class="preview-entry">
+        <div class="preview-phrase">«${esc(r.phrase)}»</div>
+        <div class="preview-meta">
+          <span class="preview-cat" style="color:${CAT_COLORS[r.category]||'#6b645a'};border-color:${CAT_COLORS[r.category]||'#6b645a'}">${esc(r.category)}</span>
+          ${renderHandle(r.handle,r.ig_link)}
+          ${r.chapter?`<span class="preview-ch">${esc(r.chapter)}</span>`:""}
+        </div>
+      </div>`).join("");
+  }
+
+  function renderWall(rows){
+    const sorted=sortByActivity(rows);
+    $("#wall").innerHTML=sorted.map(r=>{
+      const allReplies=[...(r.replies||[]),...(pendingReplies[r.id]||[])];
+      const rc=allReplies.length;
+      const repliesHtml=allReplies.length?`
+        <div class="replies">
+          ${allReplies.map(rep=>`
+            <div class="reply-entry">
+              <div class="reply-cat cat ${esc(rep.category||'')}">${esc(rep.category||'?')}</div>
+              <div>
+                <div class="meta">${renderHandle(rep.handle,rep.ig_link!==false,'small')} · ${new Date(rep.created_at).toLocaleDateString("es-ES",{day:"numeric",month:"short"})}</div>
+                <div class="phrase" style="font-size:16px">«${esc(rep.phrase)}»</div>
+              </div>
+            </div>`).join("")}
+        </div>`:"";
+      return `
+        <div class="entry" id="entry-${esc(r.id||'')}">
+          <div class="cat ${esc(r.category)}">${esc(r.category)}</div>
+          <div>
+            <div class="meta">
+              ${renderHandle(r.handle,r.ig_link!==false)}
+              <span> · Categoría ${esc(r.category)}</span>
+              <span> · ${new Date(r.created_at).toLocaleDateString("es-ES",{day:"numeric",month:"short"})}</span>
+              ${r.tester?'<span class="tester">Lector de prueba</span>':""}
+              ${rc?`<span class="reply-count-badge">&nbsp;· ${rc} respuesta${rc>1?'s':''}</span>`:""}
+            </div>
+            <div class="phrase">«${esc(r.phrase)}»</div>
+            ${r.chapter?`<div class="ch">${esc(r.chapter)}</div>`:""}
+            ${repliesHtml}
+            <button class="reply-btn" onclick="toggleReplyForm('${esc(r.id||'')}')">↩ Responder</button>
+            <div class="reply-form" id="reply-form-${esc(r.id||'')}">
+              <div class="row" style="margin-top:0">
+                <div>
+                  <label>Instagram <span style="color:var(--ink-dim);font-weight:400">(opcional)</span></label>
+                  <div style="display:flex;align-items:center;gap:0">
+                    <span style="padding:11px 10px 11px 13px;background:var(--bg);border:1px solid var(--line-strong);border-right:0;border-radius:4px 0 0 4px;font-size:15px;color:var(--ink-dim);line-height:1;flex-shrink:0">@</span>
+                    <input type="text" class="rep-ig" placeholder="su_cuenta" maxlength="30" style="border-radius:0 4px 4px 0" oninput="exclusiveFieldInline(this,'rep-ig','rep-alias');repToggleIgLink(this)">
+                  </div>
+                </div>
+                <div>
+                  <label>Nombre o alias <span style="color:var(--ink-dim);font-weight:400">(opcional)</span></label>
+                  <input type="text" class="rep-alias" placeholder="Ana, un lector, …" maxlength="40" oninput="exclusiveFieldInline(this,'rep-alias','rep-ig');repToggleIgLink(this)">
+                </div>
+                <div class="rep-ig-link-wrap" style="display:none">
+                  <label>¿Enlazar perfil?</label>
+                  <select class="rep-ig-link">
+                    <option value="yes">Sí, enlazar</option>
+                    <option value="no">No enlazar</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Su categoría</label>
+                  <select class="rep-cat">
+                    <option value="">— —</option>
+                    <option value="A">A</option><option value="B">B</option>
+                    <option value="C">C</option><option value="D">D</option>
+                    <option value="E">E</option><option value="F">F</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-top:10px">
+                <label>Su respuesta <span class="rep-count" style="color:var(--ink-dim);font-weight:400">(0/140)</span></label>
+                <textarea class="rep-phrase" maxlength="140" placeholder="Una frase en respuesta."></textarea>
+              </div>
+              <div class="reply-actions">
+                <button onclick="submitReply('${esc(r.id||'')}')">Publicar respuesta</button>
+                <button class="cancel-btn" onclick="toggleReplyForm('${esc(r.id||'')}')">Cancelar</button>
+              </div>
+              <div class="rep-msg"></div>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+
+    // Bind char counters for reply textareas
+    document.querySelectorAll('.reply-form textarea.rep-phrase').forEach(ta=>{
+      ta.addEventListener('input',e=>{
+        e.target.closest('.reply-form').querySelector('.rep-count').textContent=`(${e.target.value.length}/140)`;
+      });
+    });
+  }
+
+  function toggleReplyForm(id){
+    const f=document.getElementById(`reply-form-${id}`);
+    if(!f) return;
+    f.classList.toggle('open');
+    if(f.classList.contains('open')){ const fi=f.querySelector('.rep-ig'); if(fi) fi.focus(); }
+  }
+
+  async function submitReply(entryId){
+    const f=document.getElementById(`reply-form-${entryId}`);
+    if(!f) return;
+    const {handle,ig_link}=resolveHandle(
+      (f.querySelector('.rep-ig')||{value:''}).value,
+      (f.querySelector('.rep-alias')||{value:''}).value,
+      f.querySelector('.rep-ig-link-wrap')
+    );
+    const category=f.querySelector('.rep-cat').value;
+    const phrase=f.querySelector('.rep-phrase').value.trim();
+    const msg=f.querySelector('.rep-msg');
+    msg.className=''; msg.textContent='';
+    if(!handle){msg.className='err';msg.textContent='Indique cómo quiere aparecer.';return;}
+    if(!category){msg.className='err';msg.textContent='Elija su Categoría.';return;}
+    if(phrase.length<5){msg.className='err';msg.textContent='La respuesta es demasiado corta.';return;}
+    const btn=f.querySelector('button:not(.cancel-btn)');
+    btn.disabled=true;
+    const replyData={handle,ig_link,category,phrase,reply_to:entryId,created_at:new Date().toISOString()};
+    try{
+      // When backend supports reply_to, this will persist server-side
+      const r=await fetch(API+"/react",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(replyData)});
+      const d=await r.json();
+      if(!r.ok) throw new Error(d.error||"Error");
+    }catch(e){
+      // Fallback: store client-side until backend is ready
+      if(!pendingReplies[entryId]) pendingReplies[entryId]=[];
+      pendingReplies[entryId].push(replyData);
+    }
+    msg.className='ok'; msg.textContent='Publicado.';
+    setTimeout(()=>{
+      f.classList.remove('open');
+      const repIg=f.querySelector('.rep-ig'); if(repIg) repIg.value='';
+      const repAlias=f.querySelector('.rep-alias'); if(repAlias) repAlias.value='';
+      const repIgWrap=f.querySelector('.rep-ig-link-wrap'); if(repIgWrap) repIgWrap.style.display='none';
+      f.querySelector('.rep-phrase').value='';
+      f.querySelector('.rep-count').textContent='(0/140)';
+      msg.textContent='';
+      btn.disabled=false;
+      load();
+    },800);
+  }
+
+  async function load(){
+    let remote={signups:0,reactions:[]};
+    try{
+      const r=await fetch(API+"/state",{cache:"no-store"});
+      remote=await r.json();
+    }catch(e){}
+    const remoteReactions=(remote.reactions||[]).map(r=>({...r,replies:r.replies||[]}));
+    const all=[...remoteReactions,...SEED];
+    // "leyendo" = apuntados + autores únicos de las frases raíz (sin contar dos veces a quien se apuntó y publicó)
+    const authors=new Set(all.map(r=>r.handle.toLowerCase()));
+    const reading=(remote.signups??0)+authors.size;
+    // "frases en el muro" = raíces + todas las respuestas (actividad total)
+    const totalPhrases=all.reduce((n,r)=>n+1+(r.replies?.length||0),0);
+    $("#count-reading").textContent=reading;
+    $("#count-done").textContent=totalPhrases;
+    $("#wall-count").textContent=all.length+" frase"+(all.length===1?"":"s");
+    renderPreview(all);
+    renderWall(all);
+  }
+
+  $("#rx-phrase").addEventListener("input",e=>{
+    $("#rx-count").textContent=`(${e.target.value.length}/140)`;
+  });
+
+  $("#su-btn").addEventListener("click",async()=>{
+    const email=$("#su-email").value.trim();
+    const ok=$("#su-privacy").checked;
+    const msg=$("#su-msg");
+    msg.className=""; msg.textContent="";
+    if(!email||!/.+@.+\..+/.test(email)){msg.className="err";msg.textContent="El email no parece válido.";return;}
+    if(!ok){msg.className="err";msg.textContent="Debe aceptar la política de privacidad.";return;}
+    $("#su-btn").disabled=true;
+    try{
+      const r=await fetch(API+"/signup",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({email})});
+      const d=await r.json();
+      if(!r.ok) throw new Error(d.error||"Error");
+      msg.className="ok"; msg.textContent="Recibido. El enlace le llegará al correo en unos minutos.";
+      $("#su-email").value=""; $("#su-privacy").checked=false;
+      load();
+    }catch(e){
+      msg.className="err"; msg.textContent=e.message||"No se ha podido registrar. Pruebe en un momento.";
+    }finally{
+      $("#su-btn").disabled=false;
+    }
+  });
+
+  $("#rx-btn").addEventListener("click",async()=>{
+    const {handle,ig_link}=resolveHandle(
+      ($("#rx-ig")||{value:''}).value,
+      ($("#rx-alias")||{value:''}).value,
+      document.getElementById("rx-ig-link-wrap")
+    );
+    const category=$("#rx-cat").value;
+    const chapter=$("#rx-chap").value;
+    const phrase=$("#rx-phrase").value.trim();
+    const msg=$("#rx-msg");
+    msg.className=""; msg.textContent="";
+    if(!handle){msg.className="err";msg.textContent="Indique cómo quiere aparecer.";return;}
+    if(!category){msg.className="err";msg.textContent="Elija su Categoría.";return;}
+    if(phrase.length<10){msg.className="err";msg.textContent="La frase es demasiado corta.";return;}
+    $("#rx-btn").disabled=true;
+    try{
+      const r=await fetch(API+"/react",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({handle,ig_link,category,chapter,phrase})});
+      const d=await r.json();
+      if(!r.ok) throw new Error(d.error||"Error");
+      msg.className="ok"; msg.textContent="Publicado. Mire el muro arriba.";
+      if($("#rx-ig")) $("#rx-ig").value="";
+      if($("#rx-alias")) $("#rx-alias").value="";
+      toggleIgLinkMain();
+      $("#rx-phrase").value=""; $("#rx-count").textContent="(0/140)";
+      load();
+      setTimeout(()=>{$("#react-box").open=false;window.scrollTo({top:0,behavior:"smooth"});},1200);
+    }catch(e){
+      msg.className="err"; msg.textContent=e.message||"No se ha podido publicar.";
+    }finally{
+      $("#rx-btn").disabled=false;
+    }
+  });
+
+  load();
+  setInterval(load,30000);
+</script>
+</body>
+</html>
